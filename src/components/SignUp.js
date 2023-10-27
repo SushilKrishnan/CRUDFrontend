@@ -10,7 +10,8 @@ function SignUp() {
   //   any function helps me to access class component properties -> hook
   let handleSubmit = (event) => {
     let obj = { name, email, password };
-    const url = "http://localhost:5050/employee/create-employee";
+    const url =
+      "https://crudbackend-8jri.onrender.com/employee/create-employee";
     axios
       .post(url, obj)
       .then((res) => {

@@ -6,7 +6,7 @@ function Login() {
   const [password, setPassword] = useState();
 
   const handleSubmit = () => {
-    const url = "http://localhost:5050/employee/login";
+    const url = "https://crudbackend-8jri.onrender.com//employee/login";
     const obj = { name, email, password };
     axios
       .post(url, obj)

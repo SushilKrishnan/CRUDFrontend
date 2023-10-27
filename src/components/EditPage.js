@@ -10,7 +10,10 @@ function EditPage() {
   const obj1 = useParams();
   useEffect(() => {
     axios
-      .get("http://localhost:5050/employee/update-employee/" + obj1.id)
+      .get(
+        "https://crudbackend-8jri.onrender.com/employee/update-employee/" +
+          obj1.id
+      )
       .then((res) => {
         if (res.status === 200) {
           setName(res.data.name);
@@ -25,7 +28,9 @@ function EditPage() {
       });
   }, [obj1.id]);
   const handleSubmit = () => {
-    const url = "http://localhost:5050/employee/update-employee/" + obj1.id;
+    const url =
+      "https://crudbackend-8jri.onrender.com/employee/update-employee/" +
+      obj1.id;
     const obj2 = { name, email, password };
     axios
       .put(url, obj2)
